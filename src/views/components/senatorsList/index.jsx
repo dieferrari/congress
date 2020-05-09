@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import style from './style.module.scss'
 
 const SenatorList = ({ senators, handleSelection }) => {
-  console.log(senators)
   const handleClick = (id) => handleSelection(id)
   return (
     <ul>

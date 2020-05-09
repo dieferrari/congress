@@ -36,7 +36,7 @@ const Homepage = () => {
   return (
     <Fragment>
       <div className={style.homeWrapper}>
-        <h1>{TEXTS.membersListTitle}</h1>
+        <h1>{TEXTS.senatorsListTitle}</h1>
         { !isLoading ? 
           <SenatorsList 
             senators={listData[selectedPage]}

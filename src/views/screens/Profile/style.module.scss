@@ -3,11 +3,13 @@
 .profileWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: start;
   font-family: $primaryFont;
 
   h1 {
-    color: $primaryRed;
+    color: $primaryBlue;
+    font-size: 24px;
     font-weight: 600;
   }
 }

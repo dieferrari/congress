@@ -2,5 +2,8 @@ export default {
   headerTitle: "Congress",
 
   // HOMEPAGE
-  membersListTitle: "Members of the Senate"
+  senatorsListTitle: "Members of the Senate",
+
+  // PROFILE
+  senatorProfileTitle: "Senator"
 }

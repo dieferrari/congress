@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState, Fragment } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import style from './style.module.scss'
 import TEXTS from '../../../constants/texts'
 import ROUTES from '../../../constants/routes'
@@ -7,31 +7,32 @@ import SenatorsController from '../../../controllers/SenatorsController'
 import SenatorsList from '../../components/senatorsList'
 
 const Profile = () => {
-  const [data, setData] = useState({})
+  const [senator, setSenator] = useState({})
   const [isLoading, setLoading] = useState(true)
   const history = useHistory()
+  const match = useRouteMatch()
   
-
-  const getSenator = async () => {
+  const getSenator = async (id) => {
     const senatorsController = new SenatorsController()
     try {
-      let senator = await senatorsController.getSenator()
+      let senator = await senatorsController.getSenator(id)
       console.log("SENATOR: ", senator)
-      setData(senator)
+      setSenator(senator)
       setLoading(false)
     } catch (e) {console.log(e)}
   }
 
   useEffect(() => {
-    getSenator()
+    getSenator(match.params.id)
   },[])
 
   return (
     <Fragment>
-      <div className={style.homeWrapper}>
-        <h1>{TEXTS.membersListTitle}</h1>
+      <div className={style.profileWrapper}>
         { !isLoading ? 
-          "PROFILE"
+          <Fragment>
+            <h1>{TEXTS.senatorProfileTitle} {senator.first_name} {senator.last_name}</h1>
+          </Fragment>
         : "loading" 
         }
       </div>
