@@ -16,14 +16,13 @@
     font-weight: 400;
     box-sizing: border-box;
     transition: all 0.3s ease;
-    
+    outline: none;
+
     &::placeholder {
       color: $grey;
       font-weight: 300;
-      
     }
-    &:focus {
-      outline: none;
+    &:focus, &:hover {
       border: 1px solid $secondaryBlue;
     }
   }
