@@ -5,6 +5,7 @@ import TEXTS from '../../../constants/texts'
 import ROUTES from '../../../constants/routes'
 import SenatorsController from '../../../controllers/SenatorsController'
 import SenatorsList from '../../components/senatorsList'
+import SearchComponent from '../../components/searchComponent'
 
 const Homepage = () => {
   const [listData, setData] = useState([])
@@ -36,14 +37,17 @@ const Homepage = () => {
   return (
     <Fragment>
       <div className={style.homeWrapper}>
-        <h1>{TEXTS.senatorsListTitle}</h1>
-        { !isLoading ? 
-          <SenatorsList 
-            senators={listData[selectedPage]}
-            handleSelection={handleSenatorSelection}
-          /> 
-        : "loading" 
-        }
+        <SearchComponent />
+        <div className={style.listWrapper}>
+          <h1>{TEXTS.senatorsListTitle}</h1>
+            { !isLoading ? 
+              <SenatorsList 
+                senators={listData[selectedPage]}
+                handleSelection={handleSenatorSelection}
+              /> 
+            : "loading" 
+            }
+        </div>
       </div>
     </Fragment>
   );
