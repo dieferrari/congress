@@ -6,17 +6,23 @@
   width: 100%;
   height: 50px;
   align-items: center;
-  .flag {
-    background: url('../../../assets/us-flag.svg') center center no-repeat;
-    background-size: 100%;
-    width: 32px;
-    height: 17px;
-  }
-  .headerTitle {
-    margin-left: 16px;
-    color: $primaryBlue;
-    font-family: $primaryFont;
-    font-size: 14px;
-    font-weight: 600;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    > div:first-child {
+      background: url('../../../assets/us-flag.svg') center center no-repeat;
+      background-size: 100%;
+      width: 32px;
+      height: 17px;
+    }
+    > div:nth-child(2) {
+      margin-left: 16px;
+      color: $primaryBlue;
+      font-family: $primaryFont;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 }
