@@ -1,0 +1,14 @@
+@import '../../../scss/variables.module.scss';
+
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $primaryFont;
+  color: #000000;
+
+  h1 {
+    color: $primaryRed;
+    font-weight: 600;
+  }
+}

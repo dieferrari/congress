@@ -1,0 +1,22 @@
+@import '../../../scss/variables.module.scss';
+
+.headerContainer {
+  display: flex;
+  padding: 0px 16px;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  .flag {
+    background: url('../../../assets/us-flag.svg') center center no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 17px;
+  }
+  .headerTitle {
+    margin-left: 16px;
+    color: $primaryBlue;
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
