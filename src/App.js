@@ -12,6 +12,7 @@ const App = () => {
       <Switch>
         <Suspense fallback={null}>
           <Route exact path={ROUTES.homepage} children={<Layout><Homepage /></Layout>} />
+          <Route path={ROUTES.profile} children={<Layout></Layout>} />
         </Suspense>
       </Switch>
     </Router>

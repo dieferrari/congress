@@ -1,0 +1,23 @@
+@import '../../../scss/variables.module.scss';
+
+.senatorItem {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  color: $primaryBlue;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 4px; 
+  
+
+  span {
+    color: #4E4E4E;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  }
+}

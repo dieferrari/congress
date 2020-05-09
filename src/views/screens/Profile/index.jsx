@@ -6,42 +6,32 @@ import ROUTES from '../../../constants/routes'
 import SenatorsController from '../../../controllers/SenatorsController'
 import SenatorsList from '../../components/senatorsList'
 
-const Homepage = () => {
-  const [listData, setData] = useState([])
-  const [selectedPage, setPage] = useState(1)
-  const [totalPages, setTotalPages] = useState(1)
+const Profile = () => {
+  const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const history = useHistory()
   
 
-  const getSenators = async () => {
+  const getSenator = async () => {
     const senatorsController = new SenatorsController()
     try {
-      let senators = await senatorsController.getAllSenators()
-      console.log("MEMBERS: ", senators)
-      setData(senators)
-      setTotalPages(senators.length)
+      let senator = await senatorsController.getSenator()
+      console.log("SENATOR: ", senator)
+      setData(senator)
       setLoading(false)
     } catch (e) {console.log(e)}
   }
 
   useEffect(() => {
-    getSenators()
+    getSenator()
   },[])
-
-  const handleSenatorSelection = (id) => {
-    history.push(`${ROUTES.profile}/${id}`)
-  }
 
   return (
     <Fragment>
       <div className={style.homeWrapper}>
         <h1>{TEXTS.membersListTitle}</h1>
         { !isLoading ? 
-          <SenatorsList 
-            senators={listData[selectedPage]}
-            handleSelection={handleSenatorSelection}
-          /> 
+          "PROFILE"
         : "loading" 
         }
       </div>
@@ -49,4 +39,4 @@ const Homepage = () => {
   );
 }
 
-export default Homepage;
+export default Profile;
