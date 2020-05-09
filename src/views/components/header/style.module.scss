@@ -6,11 +6,12 @@
   width: 100%;
   height: 50px;
   align-items: center;
+  box-sizing: border-box;
   .logoContainer {
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+
     > div:first-child {
       background: url('../../../assets/us-flag.svg') center center no-repeat;
       background-size: 100%;
