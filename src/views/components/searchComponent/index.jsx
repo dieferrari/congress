@@ -4,13 +4,9 @@ import style from './style.module.scss'
 import ROUTES from '../../../constants/routes'
 import TEXTS from '../../../constants/texts'
 
-const SearchComponent = () => {
+const SearchComponent = ({ handleFilter }) => {
   const history = useHistory()
   const [value, setValue] = useState('')
-
-  const handleClick = () => {
-    history.push(ROUTES.homepage)
-  }
 
   const handleBlur = (event) => {
     if (event.keyCode === 13) {
@@ -21,7 +17,7 @@ const SearchComponent = () => {
   }
 
   const handleSubmit = () => {
-    console.log("SUBMIT SEARCH")
+    value && handleFilter(value)
   }
 
     return (
@@ -34,7 +30,7 @@ const SearchComponent = () => {
           autoComplete='justdont'
           onKeyDown={(e) => handleBlur(e)}
         ></input>
-        <div className={style.iconContainer}>
+        <div className={style.iconContainer} onClick={() => handleSubmit()}>
           <div />
         </div>
       </div>

@@ -1,12 +1,10 @@
 import SenatorsService from '../services/SenatorsService';
-import { paginateItems } from '../utils';
 export default class SenatorsController {
 	async getAllSenators(){
 		try {
 			const senatorsService = new SenatorsService()
 			let senators = await senatorsService.getAllSenators()
-			let paginatedSenators = paginateItems(senators, 10)
-			return paginatedSenators
+			return senators
 		} catch(e) { console.log(e) }
 	}
 	async getSenator(id){
