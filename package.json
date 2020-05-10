@@ -1,7 +1,7 @@
 {
   "name": "congress-ar",
   "version": "0.1.0",
-  "homepage": "http://dieferrari.github.io/congress-ar",
+  "homepage": "https://dieferrari.github.io/congress-ar",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
