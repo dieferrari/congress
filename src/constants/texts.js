@@ -7,7 +7,7 @@ export default {
 
   // HOMEPAGE
   senatorsListTitle: "Members of the Senate",
-  allSearchPlaceholder: "Examples: John Doe, senior, junior, CO",  
+  allSearchPlaceholder: "Examples: John Doe, senior, CO",  
   nameSearchPlaceholder:  "Example: John Doe",
   genderSearchPlaceholder: "Example: Male, Female",
   partySearchPlaceholder: "Example: Democrat, Republican",

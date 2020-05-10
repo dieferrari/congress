@@ -7,4 +7,8 @@
   padding: 32px 64px 64px 64px;
   box-sizing: border-box;
   background-color: $backgroundGrey;
+
+  @media (max-width: 480px) {
+    padding: 32px 16px;
+  }
 }

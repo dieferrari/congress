@@ -13,4 +13,7 @@
   font-size: 12px;
   letter-spacing: 0.4px;
   box-sizing: border-box;
+  @media (max-width: 480px) {
+    position: unset;
+  }
 }
