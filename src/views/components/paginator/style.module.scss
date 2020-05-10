@@ -1,0 +1,24 @@
+@import '../../../scss/variables.module.scss';
+
+.paginatorContainer {
+  padding: 4px 8px;
+  display: flex;
+  div {
+    cursor: pointer;
+    color: $grey;
+    font-size: 14px;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 2px;
+    transition: background-color 0.2s ease;
+  }
+  div.selected {
+    background-color: $secondaryBlue;
+    color: $white;
+    font-weight: 600;
+  }
+}

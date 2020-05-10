@@ -8,6 +8,7 @@ import SenatorsList from '../../components/senatorsList'
 import SearchComponent from '../../components/searchComponent'
 import { paginateItems } from '../../../utils/index'
 import Loader from '../../components/loader'
+import Paginator from '../../components/paginator'
 
 const Homepage = () => {
   const [data, setData] = useState([])
@@ -52,12 +53,22 @@ const Homepage = () => {
       else if (filterBy.toLowerCase() === 'gender' && senator.gender) return senator.gender.toLowerCase() === value[0].toLowerCase()
       else return false
     })
-    if (filtered.length > 0) setPaginatedData(paginateItems([...filtered], 12))
-    else setPaginatedData([[]])
+    if (filtered.length > 0) {
+      setPaginatedData(paginateItems([...filtered], 12))
+      setTotalPages(filtered.length)
+    }
+    else {
+      setPaginatedData([[]])
+      setTotalPages(1)
+    }
   }
 
   const handleSelection = (key) => {
     setFilterBy(key)
+  }
+
+  const handlePageSelection = (page) => {
+    setPage(page)
   }
 
   return (
@@ -77,6 +88,13 @@ const Homepage = () => {
             : <Loader/>
             }
         </div>
+        {totalPages > 1 &&
+          <Paginator 
+            pages={totalPages}
+            selectedPage={selectedPage}
+            handleSelection={handlePageSelection}
+          />
+        }
       </div>
     </Fragment>
   );
