@@ -6,6 +6,8 @@ import SenatorsController from '../../../controllers/SenatorsController'
 import maleAvatar from '../../../assets/male-senator-placeholder.svg'
 import femaleAvatar from '../../../assets/female-senator-placeholder.svg'
 
+import Loader from '../../components/loader'
+
 const Profile = () => {
   const [senator, setSenator] = useState({})
   const [isLoading, setLoading] = useState(true)
@@ -58,7 +60,7 @@ const Profile = () => {
               </div>
             </div>
           </Fragment>
-        : "loading" 
+        : <Loader backgroundWhite={true}/>
         }
       </div>
     </div>

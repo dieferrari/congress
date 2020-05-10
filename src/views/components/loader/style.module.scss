@@ -1,0 +1,60 @@
+@import '../../../scss/variables.module.scss';
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.circleBorder {
+  width: 32px;
+  height: 32px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(28, 75, 111, 0.1) 33%, rgba(28, 75, 111, 1) 100%);
+  animation: spin .8s linear 0s infinite;
+}
+
+.circleCore {
+  width: 100%;
+  height: 100%;
+  background-color: $backgroundGrey;
+  border-radius: 50%;
+}
+.circleCore.white {
+  background-color: $white
+}

@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { useHistory } from "react-router-dom";
 import style from './style.module.scss'
 import TEXTS from '../../../constants/texts'
@@ -7,6 +7,7 @@ import SenatorsController from '../../../controllers/SenatorsController'
 import SenatorsList from '../../components/senatorsList'
 import SearchComponent from '../../components/searchComponent'
 import { paginateItems } from '../../../utils/index'
+import Loader from '../../components/loader'
 
 const Homepage = () => {
   const [data, setData] = useState([])
@@ -22,7 +23,7 @@ const Homepage = () => {
     const senatorsController = new SenatorsController()
     try {
       let senators = await senatorsController.getAllSenators()
-      let paginatedSenators = paginateItems([...senators], 10)
+      let paginatedSenators = paginateItems([...senators], 12)
       setData(senators)
       setPaginatedData(paginatedSenators)
       setTotalPages(paginatedSenators.length)
@@ -51,7 +52,7 @@ const Homepage = () => {
       else if (filterBy.toLowerCase() === 'gender' && senator.gender) return senator.gender.toLowerCase() === value[0].toLowerCase()
       else return false
     })
-    if (filtered.length > 0) setPaginatedData(paginateItems([...filtered], 10))
+    if (filtered.length > 0) setPaginatedData(paginateItems([...filtered], 12))
     else setPaginatedData([[]])
   }
 
@@ -73,7 +74,7 @@ const Homepage = () => {
                 senators={paginatedData[selectedPage-1]}
                 handleSelection={handleSenatorSelection}
               /> 
-            : "loading" 
+            : <Loader/>
             }
         </div>
       </div>

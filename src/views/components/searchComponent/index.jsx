@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
 import style from './style.module.scss'
 import TEXTS from '../../../constants/texts'
 
 const SearchComponent = ({ handleSearch, handleSelection }) => {
   const FILTERS = ["all", "name", "party", "gender"]
-  const history = useHistory()
   const [value, setValue] = useState('')
   const [filter, setFilter] = useState('ALL')
   const [openDropdown, setOpenDropdown] = useState(false)
