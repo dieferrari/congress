@@ -1,5 +1,9 @@
 export default {
+  // HEADER
   headerTitle: "Congress",
+
+  //FOOTER
+  footerCopyright: "Copyright (c) 2020 Pro Publica Inc. All Rights Reserved.",
 
   // HOMEPAGE
   senatorsListTitle: "Members of the Senate",

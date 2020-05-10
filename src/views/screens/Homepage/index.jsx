@@ -54,8 +54,9 @@ const Homepage = () => {
       else return false
     })
     if (filtered.length > 0) {
+      let paginated = paginateItems([...filtered], 12)
       setPaginatedData(paginateItems([...filtered], 12))
-      setTotalPages(filtered.length)
+      setTotalPages(paginated.length)
     }
     else {
       setPaginatedData([[]])

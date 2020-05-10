@@ -10,8 +10,9 @@ const Paginator = ({ pages, selectedPage, handleSelection }) => {
   return (
     <div className={style.paginatorContainer}>
       {Array(pages).fill("1").map((page, ix) => (
-        <div 
-          className={selectedPage === ix+1 && style.selected}
+        <div
+          key={ix+1} 
+          className={selectedPage === ix+1 ? style.selected : ''}
           onClick={() => handleClick(ix+1)}
         >{ix+1}</div>
       ))}

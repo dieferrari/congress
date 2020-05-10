@@ -7,6 +7,7 @@
 }
 .searchbarContainer {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
 .iconContainer {
@@ -48,6 +49,7 @@ input {
   box-sizing: border-box;
   transition: all 0.3s ease;
   outline: none;
+  margin-bottom: 8px;
 
   &::placeholder {
     color: $grey;

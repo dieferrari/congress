@@ -1,7 +1,16 @@
 @import '../../../scss/variables.module.scss';
 
 .footerContainer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   width: 100%;
   padding: 16px;
+  background-color: $primaryBlue;
+  justify-content: flex-start;
+  color: $white;
+  font-family: $primaryFont;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
 }

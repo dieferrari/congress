@@ -5,8 +5,8 @@ import TEXTS from '../../../constants/texts'
 const Footer = () => {
 
     return (
-      <div className={style.FooterContainer}>
-  
+      <div className={style.footerContainer}>
+        <div>{TEXTS.footerCopyright}</div>
       </div>
     );
 }

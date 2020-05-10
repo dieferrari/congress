@@ -18,7 +18,6 @@ const Profile = () => {
     const senatorsController = new SenatorsController()
     try {
       let senator = await senatorsController.getSenator(id)
-      console.log("SENATOR: ", senator)
       setSenator(senator)
       setLoading(false)
     } catch (e) {console.log(e)}
@@ -30,7 +29,7 @@ const Profile = () => {
 
   useEffect(() => {
     getSenator(match.params.id)
-  },[])
+  },[match.params.id])
 
   return (
     <div className={style.profileWrapper}>
@@ -39,7 +38,7 @@ const Profile = () => {
         { !isLoading ? 
           <Fragment>
             <div>
-              <img src={senator.gender === "M" ? maleAvatar : femaleAvatar}/>
+              <img src={senator.gender === "M" ? maleAvatar : femaleAvatar} alt="Profile avatar"/>
             </div>
             <div className={style.detailContainer}>
               <h1>{TEXTS.senatorProfileTitle} {senator.first_name} {senator.last_name}</h1>
