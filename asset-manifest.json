@@ -1,0 +1,39 @@
+{
+  "files": {
+    "static/js/0.2dd2f32d.chunk.js": "/congress/static/js/0.2dd2f32d.chunk.js",
+    "static/js/0.2dd2f32d.chunk.js.map": "/congress/static/js/0.2dd2f32d.chunk.js.map",
+    "Homepage.css": "/congress/static/css/Homepage.55bb3f22.chunk.css",
+    "Homepage.js": "/congress/static/js/Homepage.ab25952e.chunk.js",
+    "Homepage.js.map": "/congress/static/js/Homepage.ab25952e.chunk.js.map",
+    "Layout.css": "/congress/static/css/Layout.faa6f3d2.chunk.css",
+    "Layout.js": "/congress/static/js/Layout.9264c3c2.chunk.js",
+    "Layout.js.map": "/congress/static/js/Layout.9264c3c2.chunk.js.map",
+    "Profile.css": "/congress/static/css/Profile.be309aa1.chunk.css",
+    "Profile.js": "/congress/static/js/Profile.6d584666.chunk.js",
+    "Profile.js.map": "/congress/static/js/Profile.6d584666.chunk.js.map",
+    "main.css": "/congress/static/css/main.c5bcf5fb.chunk.css",
+    "main.js": "/congress/static/js/main.01f5d4f3.chunk.js",
+    "main.js.map": "/congress/static/js/main.01f5d4f3.chunk.js.map",
+    "runtime-main.js": "/congress/static/js/runtime-main.55062ce1.js",
+    "runtime-main.js.map": "/congress/static/js/runtime-main.55062ce1.js.map",
+    "static/js/6.e9a3e16a.chunk.js": "/congress/static/js/6.e9a3e16a.chunk.js",
+    "static/js/6.e9a3e16a.chunk.js.map": "/congress/static/js/6.e9a3e16a.chunk.js.map",
+    "index.html": "/congress/index.html",
+    "precache-manifest.c458b40454c356dff717651745070d62.js": "/congress/precache-manifest.c458b40454c356dff717651745070d62.js",
+    "service-worker.js": "/congress/service-worker.js",
+    "static/css/Homepage.55bb3f22.chunk.css.map": "/congress/static/css/Homepage.55bb3f22.chunk.css.map",
+    "static/css/Layout.faa6f3d2.chunk.css.map": "/congress/static/css/Layout.faa6f3d2.chunk.css.map",
+    "static/css/Profile.be309aa1.chunk.css.map": "/congress/static/css/Profile.be309aa1.chunk.css.map",
+    "static/css/main.c5bcf5fb.chunk.css.map": "/congress/static/css/main.c5bcf5fb.chunk.css.map",
+    "static/js/6.e9a3e16a.chunk.js.LICENSE.txt": "/congress/static/js/6.e9a3e16a.chunk.js.LICENSE.txt",
+    "static/media/style.module.scss": "/congress/static/media/us-flag.ad5dff63.svg",
+    "static/media/female-senator-placeholder.svg": "/congress/static/media/female-senator-placeholder.f2d27c4d.svg",
+    "static/media/male-senator-placeholder.svg": "/congress/static/media/male-senator-placeholder.31d2c5f1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55062ce1.js",
+    "static/js/6.e9a3e16a.chunk.js",
+    "static/css/main.c5bcf5fb.chunk.css",
+    "static/js/main.01f5d4f3.chunk.js"
+  ]
+}
