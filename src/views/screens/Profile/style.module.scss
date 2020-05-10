@@ -3,13 +3,80 @@
 .profileWrapper {
   display: flex;
   flex-direction: column;
+}
+.goBackContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: $grey;
+  transition: all 0.3s ease;
+  max-width: fit-content;
+  span {
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+    background: url('../../../assets/icons/chevron-icon.svg') center center no-repeat;
+    filter: invert(28%) sepia(0%) saturate(75%) hue-rotate(156deg) brightness(96%) contrast(84%);
+    transform: rotate(90deg);
+    margin-right: 8px;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.profileContainer {
+  display: flex;
   align-items: flex-start;
   text-align: start;
   font-family: $primaryFont;
+  height: fit-content;
+  min-width: 648px;
+  min-height: 250px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: $white;
+  box-shadow: 0 2px 37px -4px rgba(0,0,0,0.1);
 
-  h1 {
-    color: $primaryBlue;
-    font-size: 24px;
-    font-weight: 600;
+  > div {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .detailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h1 {
+      margin-top: 0;
+      color: $primaryBlue;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    > div { //rows
+      display: flex;
+      font-size: 16px;
+      color: $grey;
+      margin-bottom: 12px;
+      > div:first-child { // label
+        margin-right: 8px;
+        font-weight: 600;
+      }
+      > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+      }
+      a {
+        color: $grey;
+      }
+    }
   }
 }

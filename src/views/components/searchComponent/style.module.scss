@@ -67,7 +67,7 @@ input {
   .iconContainer {
     background-color: transparent;
     > div {
-      background: url('../../../assets/icons/chevron-down-icon.svg') center center no-repeat;
+      background: url('../../../assets/icons/chevron-icon.svg') center center no-repeat;
       filter: invert(25%) sepia(12%) saturate(3965%) hue-rotate(168deg) brightness(87%) contrast(87%);
     }
   }
@@ -75,6 +75,11 @@ input {
 .dropdownContainer.open {
   .iconContainer {
     transform: rotate(180deg);
+  }
+}
+.dropdownContainer.filtering {
+  input {
+    border: 1px solid $secondaryBlue;
   }
 }
 .optionsContainer {

@@ -38,24 +38,33 @@ const Homepage = () => {
     history.push(`${ROUTES.profile}/${id}`)
   }
 
-  const handleFilter = (value) => {
+  const handleSearch = (value) => {
     let filtered = data.filter(senator => {
-      if (filterBy === 'all') {
+      if (filterBy.toLowerCase() === 'all' || !value) {
         return Object.keys(senator).some(key => {
           if (senator[key]) return (String(senator[key]).toLowerCase()).includes(value.toLowerCase())
           else return false
         })
       }
+      else if (filterBy.toLowerCase() === 'name' && senator.first_name && senator.last_name) return (senator.first_name.toLowerCase().includes(value.toLowerCase()) || senator.last_name.toLowerCase().includes(value.toLowerCase()))
+      else if (filterBy.toLowerCase() === 'party' && senator.party) return senator.party.toLowerCase() === value[0].toLowerCase()
+      else if (filterBy.toLowerCase() === 'gender' && senator.gender) return senator.gender.toLowerCase() === value[0].toLowerCase()
+      else return false
     })
     if (filtered.length > 0) setPaginatedData(paginateItems([...filtered], 10))
     else setPaginatedData([[]])
+  }
+
+  const handleSelection = (key) => {
+    setFilterBy(key)
   }
 
   return (
     <Fragment>
       <div className={style.homeWrapper}>
         <SearchComponent 
-          handleFilter={handleFilter}
+          handleSearch={handleSearch}
+          handleSelection={handleSelection}
         />
         <div className={style.listWrapper}>
           <h1>{TEXTS.senatorsListTitle}</h1>

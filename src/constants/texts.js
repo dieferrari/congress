@@ -3,9 +3,20 @@ export default {
 
   // HOMEPAGE
   senatorsListTitle: "Members of the Senate",
-  searchBarPlaceholder: "Examples: John Doe, democrat, male",
+  allSearchPlaceholder: "Examples: John Doe, senior, junior, CO",  
+  nameSearchPlaceholder:  "Example: John Doe",
+  genderSearchPlaceholder: "Example: Male, Female",
+  partySearchPlaceholder: "Example: Democrat, Republican",
 
   // PROFILE
-  senatorProfileTitle: "Senator"
+  goBackLabel: "Go back",
+  senatorProfileTitle: "Senator",
+  titleLabel: "Current title",
+  stateLabel: "State",
+  websiteLabel: "Website",
+  contactLabel: "Contact",
+  partyLabel: "Party",
+  democraticLabel: "Democratic",
+  republicanLabel: "Republican"
 
 }
