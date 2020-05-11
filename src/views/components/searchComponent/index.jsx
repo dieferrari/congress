@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import style from './style.module.scss'
 import TEXTS from '../../../constants/texts'
 
@@ -7,6 +7,7 @@ const SearchComponent = ({ handleSearch, handleSelection }) => {
   const [value, setValue] = useState('')
   const [filter, setFilter] = useState('ALL')
   const [openDropdown, setOpenDropdown] = useState(false)
+  const dropdownRef = createRef()
 
   const handleBlur = (event) => {
     if (event.keyCode === 13) {
@@ -18,6 +19,10 @@ const SearchComponent = ({ handleSearch, handleSelection }) => {
 
   const handleSubmit = () => {
     handleSearch(value)
+  }
+
+  const handleFocus = () => {
+    dropdownRef.current.focus()
   }
 
   const handleClick = (key) => {
@@ -42,6 +47,7 @@ const SearchComponent = ({ handleSearch, handleSelection }) => {
       </div>
       <div className={`${style.dropdownContainer} ${openDropdown && style.open} ${filter !== 'ALL' && style.filtering}`}>
         <input
+          ref={dropdownRef} 
           type="text"
           name="filterDropdown"
           value={filter}
@@ -49,7 +55,7 @@ const SearchComponent = ({ handleSearch, handleSelection }) => {
           onBlur={() => setTimeout(() => setOpenDropdown(false), 150)}
           onFocus={() => setOpenDropdown(true)}
         />
-        <div className={style.iconContainer} onClick={() => handleSubmit()}>
+        <div className={style.iconContainer} onClick={() => handleFocus()}>
           <div/>
         </div>
         <div className={`${style.optionsContainer} ${openDropdown && style.open}`}>
