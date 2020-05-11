@@ -11,6 +11,7 @@ export default {
   nameSearchPlaceholder:  "Example: John Doe",
   genderSearchPlaceholder: "Example: Male, Female",
   partySearchPlaceholder: "Example: Democrat, Republican",
+  resultsEmptyLabel: "No members have been found for this search",
 
   // PROFILE
   goBackLabel: "Go back",
